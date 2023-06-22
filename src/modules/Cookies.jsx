@@ -6,7 +6,7 @@ export default function Cookies() {
     <div
       className={
         cookies
-          ? 'align-center border-3 absolute bottom-0 flex h-52 w-full flex-col items-center justify-around  rounded-t-3xl border-solid border-details bg-primary text-xs'
+          ? 'align-center border-3 fixed bottom-0 flex h-52 w-full flex-col items-center  justify-around rounded-t-3xl border-solid border-details bg-primary text-xs'
           : 'hidden'
       }
     >

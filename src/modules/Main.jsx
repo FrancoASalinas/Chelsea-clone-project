@@ -26,11 +26,11 @@ export default function Main() {
   return (
     <main className="relative">
       <div className="relative h-[34rem]">
-        <img
+        {/* <img
           onLoad={() => useCarousel}
           src={carouselImg()}
           className="h-full w-full object-cover"
-        ></img>
+        ></img> */}
         <div className="absolute bottom-0 flex h-12 w-full items-center justify-evenly ">
           <Button value={0} onMouseEnter={onMouseEnter} carousel={carousel} />
           <Button value={1} onMouseEnter={onMouseEnter} carousel={carousel} />

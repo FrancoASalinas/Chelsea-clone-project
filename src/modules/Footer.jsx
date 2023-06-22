@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="grid h-max space-y-6 divide-y divide-blue-900 bg-details p-10 text-white">
+    <footer className="grid h-max space-y-6 divide-y divide-blue-900 bg-details p-10 text-sm text-white">
       <ul className="grid space-y-2 pt-6">
         <li>Careers</li>
         <li>Modern Slavery Act</li>
@@ -10,9 +10,8 @@ export default function Footer() {
         <li>Enviromantal Policy</li>
       </ul>
       <p className="pt-6">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, animi
-        dolorum obcaecati quisquam sit enim labore suscipit amet aliquam nemo
-        repellendus?
+        © 2023 Chelsea FC. All rights reserved. No part of this site may be
+        reproduced without our written permission.
       </p>
       <div className="pt-6">
         <button>English</button>

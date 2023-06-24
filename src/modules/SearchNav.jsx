@@ -7,7 +7,7 @@ export default function ({ active, onClick }) {
           : 'invisible absolute left-0 top-0 h-0 w-0 overflow-hidden opacity-0 transition-opacity'
       }
     >
-      <div className="grid w-full items-center space-y-5 bg-primary px-8 text-sm text-white">
+      <div className="grid w-full items-center space-y-5 bg-primary px-8 pb-10 text-sm text-white">
         <button
           onClick={onClick}
           className="absolute right-0 top-0 bg-blue-700 px-5 py-4"
@@ -15,9 +15,9 @@ export default function ({ active, onClick }) {
           X
         </button>
         <h2 className="pt-20 text-3xl">SEARCH</h2>
-        <div className="flex w-full justify-between rounded-full border border-solid border-white object-contain px-4 py-2 ">
-          What are you looking for?{'  '}
-          <button>
+        <div className="flex w-full  items-center rounded-full border border-solid border-white bg-transparent">
+          <input className=" bg-transparent  object-contain px-4 py-2 focus:outline-none " />
+          <button className="h-8 w-8">
             <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
           </button>
         </div>
@@ -38,14 +38,10 @@ export default function ({ active, onClick }) {
           <li className="border-b border-white border-opacity-50">
             Ticket Prices
           </li>
-          <li className="border-b border-white border-opacity-50">
+          <li className="mb-10 border-b border-white border-opacity-50">
             Frequently Asked Questions
           </li>
         </ul>
-        <img
-          className="w-10"
-          src="https://upload.wikimedia.org/wikibooks/en/1/1b/Chelsea_Logo.jpg"
-        ></img>
       </div>
     </div>
   );

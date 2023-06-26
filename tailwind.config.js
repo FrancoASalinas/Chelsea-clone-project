@@ -4,8 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#002694',
-        details: '#001050',
+        primary: '#000074',
+        details: '#001094',
+      },
+      fontFamily: {
+        chiselled: 'Chelsea Chiselled',
+        chelsea: 'Chelsea Basis Beta',
       },
     },
   },

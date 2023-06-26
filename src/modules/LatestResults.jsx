@@ -1,17 +1,16 @@
 import { useState } from 'react';
+import NextMatches from './NextMatches';
 
 export default function LatestResults() {
   const [isActive, setIsActive] = useState(1);
-  console.log(isActive);
 
   function handleClick(e) {
-    setIsActive(e.target.value);
-    console.log(e.target.value);
+    setIsActive(Number(e.target.value));
   }
 
   return (
-    <div className="relative bg-primary">
-      <div className=" absolute left-0 right-0 mx-auto flex h-12 w-min items-center justify-between rounded-full bg-gray-200">
+    <div className="relative mt-20 h-80 w-full bg-primary px-2 pb-56">
+      <div className=" absolute left-0 right-0 mx-auto flex h-12 w-min -translate-y-1/2 items-center justify-between gap-2 rounded-full bg-gray-200">
         <Button
           label={'Mens'}
           onClick={handleClick}
@@ -31,20 +30,23 @@ export default function LatestResults() {
           isActive={isActive}
         />
       </div>
-      <div></div>
+      <div className="relative top-1/2">
+        <NextMatches />
+      </div>
     </div>
   );
 }
 
-function Button({ label, value, isActive }) {
+function Button({ label, value, isActive, onClick }) {
   return (
     <button
       value={value}
       className={
         isActive === value
-          ? 'shadow-black-500 m-3  bg-white px-3 text-primary shadow-md'
-          : 'm-3 px-3  text-primary'
+          ? 'm-3 mx-1 rounded-full bg-white  p-2 text-primary shadow-sm shadow-black'
+          : 'm-3 mx-1 p-2  text-primary'
       }
+      onClick={onClick}
     >
       {label}
     </button>

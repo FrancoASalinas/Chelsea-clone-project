@@ -7,7 +7,7 @@ export default function Nav({ active, onClick }) {
           : 'invisible absolute left-0 top-0 h-0 w-0 overflow-hidden opacity-0 transition-opacity'
       }
     >
-      <div className="w-full bg-primary text-white">
+      <div className="w-full bg-details text-white">
         <button
           className="top absolute right-0 bg-blue-700 px-5 py-4"
           onClick={onClick}
@@ -23,7 +23,7 @@ export default function Nav({ active, onClick }) {
           <li>Shop</li>
         </ul>
       </div>
-      <div className="w-full bg-details text-white">
+      <div className="w-full bg-primary text-white">
         <ul className="space-y-5 px-10 py-10 text-base ">
           <li>About The Club</li>
           <li>Our History</li>
@@ -39,11 +39,9 @@ export default function Nav({ active, onClick }) {
           <li>The 5th Stand App</li>
         </ul>
       </div>
-      <div className="fixed bottom-0 flex w-full divide-x-2">
-        <button className=" w-1/2  divide-solid divide-gray-500 bg-white  p-5 text-primary">
-          Sign In
-        </button>
-        <button className=" w-1/2  divide-solid divide-gray-500 bg-white  p-5 text-primary">
+      <div className="fixed bottom-0 flex w-full divide-x-2 divide-gray-300 text-xl font-bold">
+        <button className=" w-1/2   bg-white  p-5 text-primary">Sign In</button>
+        <button className=" w-1/2    bg-white  p-5 text-primary">
           Register
         </button>
       </div>

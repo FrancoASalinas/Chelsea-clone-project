@@ -49,8 +49,10 @@ export default function CardsSlider({ label }) {
   }
 
   return (
-    <section className=" my-16 w-full overflow-x-hidden border ">
-      <h3 className="text-2xl text-primary">{label}</h3>
+    <section className=" my-16 ml-5 w-full overflow-x-hidden border text-details">
+      <h3 className="text-2xl font-bold">
+        {label} <i class="fa-solid fa-arrow-right"></i>
+      </h3>
       <div className="relative h-80 w-full">
         <div
           className="absolute left-0 top-0 flex items-center"

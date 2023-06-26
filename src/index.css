@@ -1,13 +1,21 @@
+@import url(//db.onlinewebfonts.com/c/82aa6b50c1b6e9312181faa59397eff4?family=Chelsea+Chiselled);
+@import url(//db.onlinewebfonts.com/c/3d91fe0c2d61aa044dd1f605b4a6136b?family=Chelsea+Basis+Beta);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {font-family: "Chelsea Chiselled"; src: url("//db.onlinewebfonts.com/t/82aa6b50c1b6e9312181faa59397eff4.eot"); src: url("//db.onlinewebfonts.com/t/82aa6b50c1b6e9312181faa59397eff4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/82aa6b50c1b6e9312181faa59397eff4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/82aa6b50c1b6e9312181faa59397eff4.woff") format("woff"), url("//db.onlinewebfonts.com/t/82aa6b50c1b6e9312181faa59397eff4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/82aa6b50c1b6e9312181faa59397eff4.svg#Chelsea Chiselled") format("svg"); }
+
+@font-face {font-family: "Chelsea Basis Beta"; src: url("//db.onlinewebfonts.com/t/3d91fe0c2d61aa044dd1f605b4a6136b.eot"); src: url("//db.onlinewebfonts.com/t/3d91fe0c2d61aa044dd1f605b4a6136b.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/3d91fe0c2d61aa044dd1f605b4a6136b.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/3d91fe0c2d61aa044dd1f605b4a6136b.woff") format("woff"), url("//db.onlinewebfonts.com/t/3d91fe0c2d61aa044dd1f605b4a6136b.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/3d91fe0c2d61aa044dd1f605b4a6136b.svg#Chelsea Basis Beta") format("svg"); }
+
 *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Chelsea Basis Beta';
+    font-weight: 500;
     margin: 0;
     padding: 0;
 }
 
-body{
+body, #root{
     overflow-x: hidden;
 }

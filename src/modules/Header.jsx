@@ -1,8 +1,6 @@
-import { useState } from 'react';
-
 export default function Header({ onOpenSearch, onOpenNav }) {
   return (
-    <header className=" flex h-24 w-full items-center justify-between bg-white shadow-2xl">
+    <header className=" flex h-16 w-full items-center justify-between bg-white py-10 shadow-2xl shadow-neutral-950">
       <button
         style={{
           backgroundImage:

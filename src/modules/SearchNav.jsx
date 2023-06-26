@@ -14,34 +14,59 @@ export default function ({ active, onClick }) {
         >
           X
         </button>
-        <h2 className="pt-20 text-3xl">SEARCH</h2>
-        <div className="flex w-full  items-center rounded-full border border-solid border-white bg-transparent">
-          <input className=" bg-transparent  object-contain px-4 py-2 focus:outline-none " />
-          <button className="h-8 w-8">
+        <h2 className="pt-20 font-chiselled text-3xl">SEARCH</h2>
+        <div className="flex w-full  items-center justify-between rounded-full border border-solid border-white bg-transparent">
+          <input
+            className=" w-full bg-transparent  object-contain px-4 py-2 focus:outline-none "
+            placeholder="What are you looking for?"
+          />
+          <button className="h-8 w-12 text-xl">
             <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
           </button>
         </div>
         <h2 className="pt-16 text-2xl">USEFUL LINKS</h2>
         <ul className="space-y-8 pt-8">
-          <li className="border-b border-white border-opacity-50">
-            How to Buy New Tickets
+          <li className="border-b border-white border-opacity-50 ">
+            <a href="#" className="flex justify-between">
+              <span>Chelsea FC Women's Tickets</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </li>
-          <li className="border-b border-white border-opacity-50">
-            Chelsea FC Women's Tickets
+          <li className="border-b border-white border-opacity-50 ">
+            <a href="#" className="flex justify-between">
+              <span>Chelsea FC Women's Tickets</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </li>
-          <li className="border-b border-white border-opacity-50">
-            Club Chelsea - Buy Tickets
+          <li className="border-b border-white border-opacity-50 ">
+            <a href="#" className="flex justify-between">
+              <span>Chelsea FC Women's Tickets</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </li>
-          <li className="border-b border-white border-opacity-50">
-            Stadium Tours & Museum
+          <li className="border-b border-white border-opacity-50 ">
+            <a href="#" className="flex justify-between">
+              <span>Chelsea FC Women's Tickets</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </li>
-          <li className="border-b border-white border-opacity-50">
-            Ticket Prices
+          <li className="border-b border-white border-opacity-50 ">
+            <a href="#" className="flex justify-between">
+              <span>Chelsea FC Women's Tickets</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </li>
-          <li className="mb-10 border-b border-white border-opacity-50">
-            Frequently Asked Questions
+          <li className=" mb-10 border-b border-white border-opacity-50 ">
+            <a href="#" className="flex justify-between">
+              <span>Chelsea FC Women's Tickets</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </li>
         </ul>
+        <img
+          src="src\assets\logo.png"
+          className="mt-3 w-12 justify-self-center"
+        ></img>
       </div>
     </div>
   );

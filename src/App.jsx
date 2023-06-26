@@ -17,13 +17,17 @@ function App() {
   }, [floatNav, searchNav]);
 
   return (
-    <div className=" w-full">
+    <div>
       <Header
         onOpenNav={() => setFloatNav(true)}
         onOpenSearch={() => setSearchNav(true)}
       />
-      {main && <Main />}
-      <Footer />
+      {main && (
+        <>
+          <Main />
+          <Footer />
+        </>
+      )}
       <Cookies />
       <Nav active={floatNav} onClick={() => setFloatNav(false)} />
       <SearchNav active={searchNav} onClick={() => setSearchNav(false)} />

@@ -7,16 +7,27 @@ export default function Carousel() {
   function carouselImg() {
     switch (carousel) {
       case 0:
-        return 'https://picsum.photos/seed/zero/5000/';
+        return {
+          src: 'https://picsum.photos/seed/zero/5000/',
+          label: 'Lorem Ipsum ',
+        };
         break;
       case 1:
-        return 'https://picsum.photos/seed/one/5000';
+        return {
+          src: 'https://picsum.photos/seed/blue/5000/',
+          label: 'Bla Bla Bla',
+        };
         break;
       case 2:
-        return 'https://picsum.photos/seed/two/5000';
+        return {
+          src: 'https://picsum.photos/seed/black/5000/',
+          label: 'OOk Yes yes',
+        };
         break;
     }
   }
+
+  const { src, label } = carouselImg();
 
   function onMouseEnter(e) {
     carousel !== Number(e.target.value)
@@ -24,32 +35,34 @@ export default function Carousel() {
       : null;
   }
   return (
-    <div className="relative h-[34rem] bg-gradient-to-b from-primary to-details">
+    <div className="relative h-[34rem] bg-gradient-to-b from-primary to-details text-white">
       <img
         onLoad={() => useCarousel}
-        src={carouselImg()}
+        src={src}
         className="h-full w-full object-cover transition-all"
       ></img>
-      <div className="absolute bottom-0 flex h-12 w-full items-center justify-evenly ">
-        <Button value={0} onMouseEnter={onMouseEnter} carousel={carousel} />
-        <Button value={1} onMouseEnter={onMouseEnter} carousel={carousel} />
-        <Button value={2} onMouseEnter={onMouseEnter} carousel={carousel} />
+      <div className="absolute bottom-0 w-full">
+        <h2 className="text-3xl font-bold">{label}</h2>
+        <div className=" flex h-12 w-full items-center justify-evenly ">
+          <Button value={0} onMouseEnter={onMouseEnter} carousel={carousel} />
+          <Button value={1} onMouseEnter={onMouseEnter} carousel={carousel} />
+          <Button value={2} onMouseEnter={onMouseEnter} carousel={carousel} />
+        </div>
       </div>
     </div>
   );
 }
 
 function Button({ value, onMouseEnter, carousel }) {
-    return (
-      <button
-        onMouseEnter={onMouseEnter}
-        value={value}
-        className={
-          carousel === value
-            ? 'relative mx-2 h-2 flex-grow overflow-hidden rounded-xl bg-white before:absolute before:left-0 before:top-0 before:h-full before:w-full before:translate-x-0 before:rounded-xl before:bg-primary before:transition before:duration-[5000ms] before:ease-linear'
-            : 'relative mx-2 h-2 flex-grow overflow-hidden rounded-xl bg-white before:absolute before:left-0 before:top-0 before:h-full before:w-full before:translate-x-[-100%] before:rounded-xl before:bg-primary'
-        }
-      ></button>
-    );
-  }
-  
+  return (
+    <button
+      onMouseEnter={onMouseEnter}
+      value={value}
+      className={
+        carousel === value
+          ? 'relative z-50 mx-2 h-1 flex-grow overflow-hidden rounded-xl bg-gray-300 before:absolute before:left-0 before:top-0 before:z-0 before:h-[5px] before:w-full before:translate-x-0 before:rounded-xl before:bg-details before:transition before:duration-[5000ms] before:ease-linear'
+          : 'before:border-bg-details relative z-50 mx-2 h-1 flex-grow overflow-hidden rounded-xl bg-gray-300 before:absolute before:left-0 before:top-0 before:z-0 before:h-[5px] before:w-full before:translate-x-[-100%] before:rounded-xl before:bg-details'
+      }
+    ></button>
+  );
+}

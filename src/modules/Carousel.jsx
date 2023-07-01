@@ -8,20 +8,20 @@ export default function Carousel() {
     switch (carousel) {
       case 0:
         return {
-          src: 'https://picsum.photos/seed/zero/5000/',
+          src: 'src/assets/carousel1.jpg',
           label: 'Lorem Ipsum ',
         };
         break;
       case 1:
         return {
-          src: 'https://picsum.photos/seed/blue/5000/',
-          label: 'Bla Bla Bla',
+          src: 'src/assets/carousel2.jpg',
+          label: 'Lorem Ipsum',
         };
         break;
       case 2:
         return {
-          src: 'https://picsum.photos/seed/black/5000/',
-          label: 'OOk Yes yes',
+          src: 'src/assets/carousel3.jpg',
+          label: 'Lorem Ipsum',
         };
         break;
     }
@@ -39,7 +39,7 @@ export default function Carousel() {
       <img
         onLoad={() => useCarousel}
         src={src}
-        className="h-full w-full object-cover transition-all"
+        className="h-full w-full object-cover object-top transition-all"
       ></img>
       <div className="absolute bottom-0 w-full">
         <h2 className="text-3xl font-bold">{label}</h2>

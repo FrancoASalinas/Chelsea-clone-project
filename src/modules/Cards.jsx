@@ -1,7 +1,7 @@
 export default function Cards({ label, img, type }) {
   return (
-    <div className="mx-2 h-80 w-56 divide-y-2 divide-gray-200 border">
-      <div className="h-40 w-full ">
+    <div className="mx-2 h-80 w-56 divide-y-2 divide-gray-200 border ">
+      <div className="h-40 w-full xl:h-1/3 ">
         <img className="h-full w-full object-cover" src={img}></img>
         <span className="text-2xl text-primary">{label}</span>
       </div>

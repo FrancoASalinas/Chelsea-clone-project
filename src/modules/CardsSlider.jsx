@@ -50,9 +50,19 @@ export default function CardsSlider({ label }) {
 
   return (
     <section className=" my-16 ml-5 w-full overflow-x-hidden border text-details">
-      <h3 className="text-2xl font-bold">
-        {label} <i class="fa-solid fa-arrow-right"></i>
-      </h3>
+      <div className="flex h-full justify-between">
+        <h3 className="text-2xl font-bold">
+          {label} <i class="fa-solid fa-arrow-right"></i>
+        </h3>
+        <div className="hidden xl:flex">
+          <button className="mx-2 mb-4 bg-primary px-5 py-3 font-extrabold text-white">
+            <i className="fa-solid fa-angle-left "></i>
+          </button>
+          <button className="mx-2 mb-4 bg-primary px-5 py-3 font-extrabold text-white">
+            <i className="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
       <div className="relative h-80 w-full">
         <div
           className="absolute left-0 top-0 flex items-center"

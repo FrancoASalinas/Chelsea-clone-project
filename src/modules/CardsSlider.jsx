@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import Cards from './Cards';
+import Arrows from './Arrows';
 
 export default function CardsSlider({ label }) {
   const [isDragging, setIsDragging] = useState(false);
@@ -54,14 +55,7 @@ export default function CardsSlider({ label }) {
         <h3 className="text-2xl font-bold">
           {label} <i class="fa-solid fa-arrow-right"></i>
         </h3>
-        <div className="hidden xl:flex">
-          <button className="mx-2 mb-4 bg-primary px-5 py-3 font-extrabold text-white">
-            <i className="fa-solid fa-angle-left "></i>
-          </button>
-          <button className="mx-2 mb-4 bg-primary px-5 py-3 font-extrabold text-white">
-            <i className="fa-solid fa-angle-right"></i>
-          </button>
-        </div>
+        <Arrows />
       </div>
       <div className="relative h-80 w-full">
         <div

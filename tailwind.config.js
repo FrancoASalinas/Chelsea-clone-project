@@ -6,6 +6,7 @@ export default {
       colors: {
         primary: '#000074',
         details: '#001094',
+        light: '#2020af',
       },
       fontFamily: {
         chiselled: 'Chelsea Chiselled',

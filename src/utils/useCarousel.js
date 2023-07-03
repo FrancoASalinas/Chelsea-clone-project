@@ -11,9 +11,34 @@ export default function useCarousel(initialValue) {
       } else {
         setCarousel((prev) => prev + 1);
       }
-    }, 5000);
+    }, 10000);
     return () => clearTimeout(timeID);
   }
 
-  return [carousel, setCarousel];
+  function carouselImg() {
+    switch (carousel) {
+      case 0:
+        return {
+          src: 'src/assets/carousel1.jpg',
+          label: 'Lorem Ipsum ',
+        };
+        break;
+      case 1:
+        return {
+          src: 'src/assets/carousel2.jpg',
+          label: 'Lorem Ipsum',
+        };
+        break;
+      case 2:
+        return {
+          src: 'src/assets/carousel3.jpg',
+          label: 'Lorem Ipsum',
+        };
+        break;
+    }
+  }
+
+  const { src, label } = carouselImg();
+
+  return [carousel, setCarousel, src, label];
 }

@@ -1,6 +1,6 @@
 export default function Arrows({ index, max, onPrev, onNext }) {
   return (
-    <div className="hidden w-min xl:flex">
+    <div className="flex w-min">
       <button
         onClick={onPrev}
         disabled={index === 0 ? true : false}

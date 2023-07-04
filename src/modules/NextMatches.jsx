@@ -2,7 +2,7 @@ import Match from './Match';
 
 export default function NextMatches() {
   return (
-    <div className=" relative left-0 top-0 flex w-full items-center overflow-x-scroll bg-transparent">
+    <div className=" relative left-0 top-0 flex w-full items-center overflow-x-auto bg-transparent">
       <Match
         date={'SUN 28 MAY 2023'}
         competition={'Premier League'}

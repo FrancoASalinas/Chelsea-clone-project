@@ -1,7 +1,7 @@
 export default function Match({ date, competition, result }) {
   return (
-    <div className=" mx-5  h-max min-w-max bg-white">
-      <div className="flex flex-col items-center justify-between p-5 px-10">
+    <div className=" mx-5  h-max min-w-max bg-white sm:w-full">
+      <div className="flex flex-col items-center justify-between p-5 px-10 lg:px-24">
         <span className="text-sm text-gray-500">{date}</span>
         <span className="text-xs text-gray-400">{competition}</span>
         <div className="pb-10">
@@ -18,8 +18,8 @@ export default function Match({ date, competition, result }) {
           </div>
         </div>
       </div>
-      <div className="w-full bg-primary  px-10 py-5 text-white">
-        Match Centre
+      <div className="w-full cursor-pointer bg-light  px-10 py-5 text-center text-white">
+        Match Centre <i className="fa-solid fa-arrow-right"></i>
       </div>
     </div>
   );

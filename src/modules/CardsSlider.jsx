@@ -3,67 +3,25 @@ import Cards from './Cards';
 import Arrows from './Arrows';
 
 export default function CardsSlider({ label }) {
-  const [isDragging, setIsDragging] = useState(false);
-  const [startPos, setStartPos] = useState(0);
-  const [currentTranslate, setCurrentTranslate] = useState(0);
-
-  const animationRef = useRef();
-
-  window.oncontextmenu = function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    return false;
-  };
-
-  console.log(currentTranslate);
-
-  function getPositionX(event) {
-    return event.touches[0].clientX;
-  }
-
-  function animation() {
-    setSliderPosition();
-    if (isDragging) requestAnimationFrame(animation);
-  }
-
-  function setSliderPosition() {
-    return `translateX(${currentTranslate}px)`;
-  }
-
-  function handleTouchStart(event) {
-    setStartPos(getPositionX(event));
-    setIsDragging(true);
-
-    animationRef.current = requestAnimationFrame(animation);
-  }
-
-  function handleTouchMove(event) {
-    if (isDragging) {
-      const currentPosition = getPositionX(event);
-      setCurrentTranslate(currentPosition - startPos);
-    }
-  }
-
-  function handleTouchEnd() {
-    setIsDragging(false);
-    cancelAnimationFrame(animationRef.current);
-  }
-
+  const [index, setIndex] = useState(0);
   return (
-    <section className=" my-16 ml-5 w-full overflow-x-hidden border text-details">
+    <section className="my-16 w-full overflow-x-hidden text-details">
       <div className="flex h-full justify-between">
         <h3 className="text-2xl font-bold">
-          {label} <i class="fa-solid fa-arrow-right"></i>
+          {label} <i className="fa-solid fa-arrow-right"></i>
         </h3>
-        <Arrows />
+        <div>
+          <Arrows
+            index={index}
+            onNext={() => setIndex((prev) => prev + 1)}
+            onPrev={() => setIndex((prev) => prev - 1)}
+            max={4}
+          />
+        </div>
       </div>
-      <div className="relative h-80 w-full">
+      <div className="relative h-80 w-full xl:h-[30rem]">
         <div
-          className="absolute left-0 top-0 flex items-center"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          style={{ transform: setSliderPosition() }}
+          className={`absolute left-0 top-0 flex -translate-x-[calc(100%/6*${index})] w-[50rem] items-center transition-all duration-1000 sm:w-[80rem] lg:w-[130rem] xl:w-[180rem] 2xl:w-[220rem]`}
         >
           <Cards
             label="something"

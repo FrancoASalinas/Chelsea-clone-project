@@ -53,10 +53,12 @@ export default function Nav({ active, onClick }) {
               <li className=" mt-1 cursor-pointer">Lorem</li>
             </ul>
           </li>
-          <li className="group h-10  grid-cols-2 xl:grid ">
-            Shop
+          <li className="group h-10 grid-cols-2 xl:grid">
+            <span className="cursor-pointer">Shop</span>
             <ul className="hidden border-l border-white border-opacity-30 p-5 xl:invisible xl:grid xl:group-hover:visible">
-              <li>Lorem</li> <li>Lorem</li> <li>Lorem</li>
+              <li className="mt-1 cursor-pointer">Lorem</li>{' '}
+              <li className="mt-1 cursor-pointer">Lorem</li>{' '}
+              <li className="mt-1 cursor-pointer">Lorem</li>
             </ul>
           </li>
         </ul>

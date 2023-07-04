@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png';
+
 export default function ({ active, onClick }) {
   return (
     <div
@@ -32,7 +34,7 @@ export default function ({ active, onClick }) {
               className="flex h-14 justify-between xl:py-5 xl:text-xl"
             >
               <span>How To Buy Men's tickets</span>
-              <i class="fa-solid fa-arrow-right"></i>
+              <i className="fa-solid fa-arrow-right"></i>
             </a>
           </li>
           <li className="mx-10 border-b border-white border-opacity-50">
@@ -82,7 +84,7 @@ export default function ({ active, onClick }) {
           </li>
         </ul>
         <img
-          src="src\assets\logo.png"
+          src={logo}
           className="w-12 justify-self-center pt-10 xl:w-32"
         ></img>
       </div>

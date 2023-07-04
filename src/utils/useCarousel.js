@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import carousel1 from '../assets/carousel1.jpg';
+import carousel2 from '../assets/carousel2.jpg';
+import carousel3 from '../assets/carousel3.jpg';
 
 export default function useCarousel(initialValue) {
   const [carousel, setCarousel] = useState(initialValue);
@@ -19,19 +22,19 @@ export default function useCarousel(initialValue) {
     switch (carousel) {
       case 0:
         return {
-          src: 'src/assets/carousel1.jpg',
+          src: carousel1,
           label: 'Lorem Ipsum ',
         };
         break;
       case 1:
         return {
-          src: 'src/assets/carousel2.jpg',
+          src: carousel2,
           label: 'Lorem Ipsum',
         };
         break;
       case 2:
         return {
-          src: 'src/assets/carousel3.jpg',
+          src: carousel3,
           label: 'Lorem Ipsum',
         };
         break;

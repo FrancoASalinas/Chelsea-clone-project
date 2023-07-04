@@ -1,5 +1,4 @@
 import useCarousel from '../utils/useCarousel';
-import { useState } from 'react';
 import Arrows from './Arrows';
 
 export default function Carousel() {

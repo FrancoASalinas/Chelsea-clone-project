@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png';
+
 export default function Header({ onOpenSearch, onOpenNav }) {
   return (
     <>
@@ -20,10 +22,7 @@ export default function Header({ onOpenSearch, onOpenNav }) {
         </ul>
       </nav>
       <header className="flex h-16 w-full items-center justify-between border border-x-[#aaa] bg-white py-10 shadow-2xl shadow-neutral-950 xl:relative xl:h-max xl:border-none xl:p-0">
-        <img
-          src="src/assets/logo.png"
-          className="ml-5 w-16  bg-cover xl:w-20"
-        ></img>
+        <img src={logo} className="ml-5 w-16  bg-cover xl:w-20"></img>
         <nav className="hidden h-[7.2rem] text-xl text-primary xl:flex">
           <ul className="flex h-full items-center">
             <ListItem label={'LATEST'}>

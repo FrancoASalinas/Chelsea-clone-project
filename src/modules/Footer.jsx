@@ -1,3 +1,8 @@
+import logo from '../assets/logo.png';
+import play from '../assets/googleplay.webp';
+import app from '../assets/appstore.webp';
+import fifth from '../assets/the-fifth-stand.webp';
+
 export default function Footer() {
   return (
     <footer>
@@ -11,11 +16,7 @@ function Footer1() {
   return (
     <div className="grid h-max space-y-6 divide-y divide-blue-900 bg-primary p-10 px-5 py-10  text-sm text-white lg:grid-cols-3 lg:space-x-6 lg:space-y-0 lg:divide-x lg:divide-y-0">
       <div className="space-y-5 px-5">
-        <img
-          src="src/assets/logo.png"
-          alt="Chelsea logo"
-          className="h-20 w-20 "
-        />
+        <img src={logo} alt="Chelsea logo" className="h-20 w-20 " />
         <div className="space-y-2">
           <p>Chelsea Football CLub</p>
           <p>Stamford Bridge</p>
@@ -49,20 +50,17 @@ function Footer1() {
         <li className="my-2 cursor-pointer py-2">Junior Blues</li>
       </ul>
       <div className="space-y-5 px-5 py-8">
-        <img
-          src="src/assets/the-fifth-stand.webp"
-          className="w-24 cursor-pointer"
-        ></img>
+        <img src={fifth} className="w-24 cursor-pointer"></img>
         <p>
           Get unrivalled access to all things Chelsea with our official club
           app, The 5th Stand.
         </p>
         <div>
           <a className="cursor-pointer">
-            <img src="src/assets/googleplay.webp" className="m-2 w-24"></img>
+            <img src={play} className="m-2 w-24"></img>
           </a>
           <a className="cursor-pointer">
-            <img src="src/assets/appstore.webp" className="m-2 w-24"></img>
+            <img src={app} className="m-2 w-24"></img>
           </a>
         </div>
       </div>
